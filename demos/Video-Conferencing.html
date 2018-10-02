@@ -202,12 +202,13 @@ connection.onstream = function(event) {
   try {
         video.setAttributeNode(document.createAttribute('autoplay'));
         video.setAttributeNode(document.createAttribute('playsinline'));
+        video.setAttributeNode(document.createAttribute('controls'));
     } catch (e) {
         video.setAttribute('autoplay', true);
         video.setAttribute('playsinline', true);
-        video.setAttribute("controls", true);
+        video.setAttribute('controls', true);
 setTimeout(() => {
-    video.removeAttribute("controls");
+    video.removeAttribute('controls');
     }
     if(event.type === 'local') {
       video.volume = 0;
