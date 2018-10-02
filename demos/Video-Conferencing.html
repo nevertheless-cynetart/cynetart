@@ -74,9 +74,9 @@ connection.session = {
     audio: true,
     video: {
         mandatory: {
-            minWidth: 320,
+            minWidth: 640,
             maxWidth: 640,
-            minHeight: 240,
+            minHeight: 480,
             maxHeight: 480
         },
         optional: []
@@ -205,6 +205,9 @@ connection.onstream = function(event) {
     } catch (e) {
         video.setAttribute('autoplay', true);
         video.setAttribute('playsinline', true);
+        video.setAttribute("controls", true);
+setTimeout(() => {
+    video.removeAttribute("controls");
     }
     if(event.type === 'local') {
       video.volume = 0;
@@ -217,7 +220,7 @@ connection.onstream = function(event) {
     video.srcObject = event.stream;
     var width = parseInt(connection.videosContainer.clientWidth / 4) - 20;
     var mediaElement = getHTMLMediaElement(video, {
-        //title: event.userid,
+        title: event.userid,
         buttons: ['full-screen'],
         width: width,
         showOnMouseEnter: false
