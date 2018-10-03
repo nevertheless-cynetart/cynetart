@@ -98,8 +98,7 @@ connection.onstream = function(event) {
     event.mediaElement.volume = 0;
 
     var video = document.createElement('video');
-  
-//
+ 
     try {
       
         video.setAttributeNode(document.createAttribute('autoplay'));
@@ -122,7 +121,7 @@ connection.onstream = function(event) {
     var width = parseInt(connection.videosContainer.clientWidth / 3) - 20;
     var mediaElement = getHTMLMediaElement(video, {
         //title: event.userid,
-        buttons: ['full-screen', 'close'],
+        buttons: ['full-screen'],
         width: width,
         showOnMouseEnter: false
     });
