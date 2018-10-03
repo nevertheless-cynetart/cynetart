@@ -87,10 +87,10 @@ connection.sdpConstraints.mandatory = {
 
 connection.videosContainer = document.getElementById('videos-container');
 connection.onstream = function(event) {
-    //var existing = document.getElementById(event.streamid);
-    //if(existing && existing.parentNode) {
-    //  existing.parentNode.removeChild(existing);
-    //}
+    var existing = document.getElementById(event.streamid);
+    if(existing && existing.parentNode) {
+      existing.parentNode.removeChild(existing);
+    }
 
     event.mediaElement.removeAttribute('src');
     event.mediaElement.removeAttribute('srcObject');
