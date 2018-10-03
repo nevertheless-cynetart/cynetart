@@ -23,10 +23,8 @@
     <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
   </section>
   </div>
-  
-  <script src="https://rtcmulticonnection.herokuapp.com/dist/RTCMultiConnection.min.js"></script>
-  
-  <script src="/dev/adapter.js"></script>
+<script src="/dist/RTCMultiConnection.min.js"></script>
+<script src="/dev/adapter.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 
 <!-- custom layout for HTML5 audio/video elements -->
@@ -65,8 +63,6 @@ connection.socketURL = '/';
 // connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
 connection.socketMessageEvent = 'video-conference-demo';
 
-
-  
   
 connection.session = {
     video: true, // screen || audio || video
@@ -189,19 +185,7 @@ connection.onstream = function(event) {
     document.body.appendChild(event.mediaElement);
 };  
 
-  //
-  
-  
-connection.onstream = function(event) {
-    var video = event.mediaElement;
-    if (document.getElementById(video.id)) return;
-    document.body.appendChild(video);
-};
-  
-  
-  //
-  
-  
+
 connection.videosContainer = document.getElementById('videos-container');
   
 connection.onstream = function(event) {
@@ -221,10 +205,6 @@ connection.onstream = function(event) {
     } catch (e) {
         video.setAttribute('autoplay', true);
         video.setAttribute('playsinline', true);
-      video.setAttribute("controls", true);
-      setTimeout(() => {
-    video.removeAttribute("controls");
-});
     }
     if(event.type === 'local') {
       video.volume = 0;
@@ -253,26 +233,6 @@ connection.onstream = function(event) {
     
 };
 
-  connection.onstream = function(event) {
-    var video = event.mediaElement;
-    video.id = event.stream.id; // check this line ---<<------
-    document.body.appendChild(video);
-};
-  
-  
-  connection.onleave = function(event) {
-    var remoteUserId = event.userid;
-    var remoteUserFullName = event.extra.fullName;
-    alert(remoteUserFullName + ' left.');
-};
-  
-  
-  connection.onstreamended = function(event) {
-    var video = document.getElementById(event.streamid);
-    if (video && video.parentNode) {
-        video.parentNode.removeChild(video);
-    }
-};
 
   
 connection.onstreamended = function(event) {
