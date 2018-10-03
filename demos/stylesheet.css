@@ -6,6 +6,11 @@
     font-style: normal;
 }
 
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
 html, body, section, ul, li, nav, a, h1, h2 {
     padding: 0;
     margin: 0;
