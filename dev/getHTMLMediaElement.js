@@ -255,7 +255,7 @@ function getHTMLMediaElement(mediaElement, config) {
         mediaBox.appendChild(h2);
     }
 
-    //mediaBox.appendChild(mediaElement);
+    mediaBox.appendChild(mediaElement);
 
     
     if (!config.width) config.width = (innerWidth / 2) - 50;
@@ -315,9 +315,9 @@ function getHTMLMediaElement(mediaElement, config) {
 
     mediaElementContainer.toggle = function(clasName) {
         if (typeof clasName != 'string') {
-            for (var i = 0; i < clasName.length; i++) {
-                mediaElementContainer.toggle(clasName[i]);
-            }
+            //for (var i = 0; i < clasName.length; i++) {
+            //    mediaElementContainer.toggle(clasName[i]);
+            //}
             return;
         }
 
