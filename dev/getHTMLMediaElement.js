@@ -252,10 +252,10 @@ function getHTMLMediaElement(mediaElement, config) {
         var h2 = document.createElement('h2');
         h2.innerHTML = config.title;
         h2.setAttribute('style', 'position: absolute;color:white;font-size:17px;text-shadow: 1px 1px black;padding:0;margin:0;text-align: left; margin-top: 10px; margin-left: 10px; display: block; border: 0;line-height:1.5;z-index:1;');
-        //mediaBox.appendChild(h2);
+        mediaBox.appendChild(h2);
     }
 
-    //mediaBox.appendChild(mediaElement);
+    mediaBox.appendChild(mediaElement);
 
     
     if (!config.width) config.width = (innerWidth / 2) - 50;
