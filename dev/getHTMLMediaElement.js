@@ -315,9 +315,9 @@ function getHTMLMediaElement(mediaElement, config) {
 
     mediaElementContainer.toggle = function(clasName) {
         if (typeof clasName != 'string') {
-            //for (var i = 0; i < clasName.length; i++) {
-            //    mediaElementContainer.toggle(clasName[i]);
-            //}
+            for (var i = 0; i < clasName.length; i++) {
+                mediaElementContainer.toggle(clasName[i]);
+            }
             return;
         }
 
@@ -334,7 +334,7 @@ function getHTMLMediaElement(mediaElement, config) {
 
     mediaElementContainer.media = mediaElement;
 
-    return mediaElementContainer;
+    //return mediaElementContainer;
 }
 
 // __________________
