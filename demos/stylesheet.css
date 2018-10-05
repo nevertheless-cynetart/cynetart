@@ -137,9 +137,10 @@ button[disabled], input[disabled] {
   box-shadow: none!important;
   text-shadow: none!important;
   color: #dcd7d7!important;
-  border: 1px solid #dcd7d7!important;
+  border: 0px solid #dcd7d7!important;
   cursor: not-allowed!important;
   visibility: hidden;
+  font-size: 1px;
 }
 
 .menu-explorer {
