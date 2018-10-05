@@ -11,6 +11,7 @@ function getHTMLMediaElement(mediaElement, config) {
 
         var mediaStream = mediaElement;
         mediaElement = document.createElement(mediaStream.getVideoTracks().length ? 'video' : 'audio');
+        
 
         try {
             mediaElement.setAttributeNode(document.createAttribute('autoplay'));
@@ -254,8 +255,9 @@ function getHTMLMediaElement(mediaElement, config) {
         mediaBox.appendChild(h2);
     }
 
-    mediaBox.appendChild(mediaElement);
+    //mediaBox.appendChild(mediaElement);
 
+    
     if (!config.width) config.width = (innerWidth / 2) - 50;
 
     mediaElementContainer.style.width = config.width + 'px';
