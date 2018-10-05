@@ -58,7 +58,7 @@ h2 {
 }
 
 .logo img {
-    height: 0px;
+    
 }
 
 nav {
@@ -67,7 +67,7 @@ nav {
 }
 
 header {
-    height: 0px;
+    
 }
 
 section, header {
@@ -79,7 +79,7 @@ section, header, footer {
 
 ul li, nav li {
     list-style: none;
-    display: inline-block;
+    display: none;
 }
 
 a {
