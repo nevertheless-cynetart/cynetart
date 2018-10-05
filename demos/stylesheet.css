@@ -106,6 +106,8 @@ a:hover {
 
 .make-center {
   text-align: left;
+    width: 0px;
+    height: 0px;
 }
 
 .hide-buttons {
