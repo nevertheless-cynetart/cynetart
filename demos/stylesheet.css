@@ -106,7 +106,7 @@ a:hover {
 
 .make-center {
   text-align: left;
-    visibility: hidden;
+    height: 2px;
 }
 
 button {
