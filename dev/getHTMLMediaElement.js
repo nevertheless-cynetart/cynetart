@@ -15,7 +15,6 @@ function getHTMLMediaElement(mediaElement, config) {
         try {
             mediaElement.setAttributeNode(document.createAttribute('autoplay'));
             mediaElement.setAttributeNode(document.createAttribute('playsinline'));
-            launchFullscreen(mediaElement);
             
         } catch (e) {
             mediaElement.setAttribute('autoplay', true);
