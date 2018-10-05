@@ -43,7 +43,7 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
     margin-left: 5px;
     z-index: 100;
     opacity: 0;
-    display: none;
+    
 }
 
 .media-controls .control, .volume-control .control {
@@ -57,6 +57,7 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
 
 .media-controls .control:first-child {
     border-bottom-left-radius: 5px;
+    display: none;
 }
 
 .volume-control .control:first-child {
