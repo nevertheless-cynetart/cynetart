@@ -24,8 +24,8 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
 .media-container {
     width: 36%;
     display: inline-block;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 4px;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 0px;
     overflow: hidden;
     vertical-align: top;
     background: white;
@@ -33,8 +33,8 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
 
 .media-box {
     background: black;
-    border: 1px solid rgb(107, 107, 107);
-    margin: 1px;
+    border: 0px solid rgb(107, 107, 107);
+    margin: 0px;
 }
 
 .media-controls, .volume-control {
@@ -43,6 +43,7 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
     margin-left: 5px;
     z-index: 100;
     opacity: 0;
+    display: none;
 }
 
 .media-controls .control, .volume-control .control {
@@ -60,6 +61,7 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
 
 .volume-control .control:first-child {
     border-top-left-radius: 5px;
+    display: none;
 }
 
 .media-controls .control:hover, .media-controls .selected, .volume-control .control:hover {
@@ -72,18 +74,22 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
 
 .mute-audio {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACsUlEQVRYR92Xu2siURTGp0hnJRgVGVNtEcHOiI2taWIa3Vgpgu4qiKBoCpOgxgdofD8QTFYUXMRSRLstt9xyy/0Tttxyi9kz17mXq7majFED+8EH+p2Zub+5j4NygiC8q/8PDQaDn9LHw6rf739Sq9UCthQfRk9PT2Rg7Ha7/U0q71erA2OXy+X9AgQ/B3KsgbFZADc3N25clyL5SiaTKnqgdW40Gs8A4vE4ARD9+Pj4XSq9Ts1m8xf9gE0uFosIYDwezyaTCXnjVqvVpq+T4oWur6/5UChEiuFweOkinL/GeAnoDD0ENJ1Of7ByTqFQ8HQB+/7+vi3WWbV1fnh4eAYgWsxEQb8gWSQS+YjCk5MTJkA2m5UNUK1WyR4olUq/cW6z2cJidn5+foSz09PTBYBer2cCpNNp2QC1Wm1pE9I1WIIz8BGAoe+xWEwYjUY8p9PpmAB3d3dbLwEWvOUHXHO73WdiZjAYrDiDE8JzWq2WCZBKpWQDwNstAXg8HgJgtVoRgN1uJwAul2v9DGwDsDoD0D8IALw5AnA6nQTg8vKS5zQazc72QKVSWQIIBAIEwGw2IwCHw0EALi4ueE6lUjEB8vn8m2fAYrEQgKurKwRgMpkIgN/v58UBmAC5XE42wOopgGeQGswOAlAqlQggGAwKnU6H546Pj5kA8DZvApjP56QPGI1G1Aeg65I+AHtv0QfWnQLo67IBYNkQQK/Xm9H5bDZDANBzCACs/wIApoIJgIogVm2dWa0Yms1X9CAQnUvRy6JvesmFQoEsgfhd+ohEXxeNRstS/DrRN29yt9td2oRY9DVer1fe7wEsn89npx/Ecr1e3wiQSCT+StH2ogdcdSaTYQLsXMPh8A8LgPWTbG+CM29cBZBKh9Xt7e0XOPfvM/hOxPrHekgzw8NZ4P4BtGizy4jmqy8AAAAASUVORK5CYII=');
+display: none;
 }
 
 .unmute-audio {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACY0lEQVRYR9WXS2/aQBDHfa9POaDGhKTpgTNIfICohfI4wC0HDuWdOCWQBKy24hmUBqduAjgVhx4Q50oIPk0/TQ/urhlbNplFEcWu+pd+EjszO7OyZweZ0zTtn4Ia3QQ1uslWNJ1OVVmWtU6n8xpM7ikSiVQ8Ho9mAGbnlcvlDq2FXT1AvV7/jRWnQIgzGg2GC6yoFQjdvsJv3ipYwVUgfHuKRt4dYYVYwLbnKxaL7WCJsu8zvHzbF8ST0ye+dUDa56vdbqOJvLsCrw5HwtXFJepnAWl1kdkgEU5gaUpRlGPCjb4gwwNNdHjwir9XvgnV8wrqZ6EnJQoGgynDlkgkjsDMpVKpgGEPBAIZTpIkWwID+gS+yndC+ewD6mcBdWhe8wCUeDzuTSaTL6y2QqGQ4brdrmmw4vPu8cOHgXBRqaJ+FlBfV7lclrAYSj6fX76CRqOBBhz49vnv6qNQu7xC/Sz0pBaRofVjNUYUxZ/g5rher2dzGuzv+XgyeDbuAavWxjSbTZvTgB6ANmGlfI76WUBaU1gMBdwc12q10ADh5S5/15eFs1MR9bOAtLpI99t6oFarmb+j0eiyB1gHoE04uH/YuAnT6bTtFhSLRS9pStstIFcywxxE9Ak8jtSNB1E4HDYPUCqVzDlQrVbNORAKhTLMJ0B74G9vwWKxkAhPJuF8Pj8mLF9BNpvdIdiSfP74SbvudPnbmy/O/xes02w2E/r9PlqIBWzdrsjgKGHFMGCLM8IKrgKhzmkymfzCChtAmPNi3R5wuyNyp6PW4n6/3/0PE6rxeKwSYrD8z4R9MLqHxv0BTZnWtpv+sYEAAAAASUVORK5CYII=');
+display: none;
 }
 
 .mute-video {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAABoElEQVRYR2NgGAWDNARSge4qJxL7UN0PfHx8O5iZmW8CDSYGd1HdAXJycns4ODjuAQ3Ghz8D5f8D8SKqO0BfXz+Ll5e3FmgwPnyelg7gADqAE2gBPryEZg4gMkgXUtsBTEAD2UjAi6EOAIUEsj5GZA8A0xOTpKQkNnOZ0T0qCRRIJAEfhTrgGJoeQTQHSAMdgM1cY3QH2AAFXpOAf0AdAKKR9WmCDO7q6hIPCgrSEhISShQREcFmbg26AxyhBoKyFiVYF2RwW1tbrr+//zEWFpZrQIzNvDaaOsDGxqZdWVn5GyMj408cHqKNA9jY2EqApWg4Dw/PZk5OTnwhSTMHnGZiYjoA9PVjAlFJGweA4hsY7MSkIdo4gIQEPOqAYRoCwBxATAIEqaFNCADLgcdAR9wFWvBhQLIhOzt7K7AgygE6Yi+B0KBNCAAttQA6gNfAwGASsCqmf0kIDHZwZZSTk1Po4OBwBlgw3SK2MiK1OsZVdcOqYwNgdRzOzc3dyM/PT1R1rAJ0eB8VMKhhAwfAaNAANkiwmeuNXh2P8kdmCAAAkSPyEJegDaEAAAAASUVORK5CYII=');
+display: none;
 }
 
 .unmute-video {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACFUlEQVRYR2NgGIFgPtDPGQPlb5Dl/4H4PRBL4HNEKlCynEjsQ6RvYJZ/B6p3wKuHj49vBzMz802gImJwFxEOaID6HGS5B0H1cnJyezg4OO4BFeLDn6GGLiJgIGmWgwzT19fP4uXlrQUy8eHzRDigAKoGFO8RBH0OUwB0AAfQAZxAPj68hIADEpAsB7GpDhbicQCy5RXE2swEVMhGAl4MdQAoJJD1JSL5vAGYnpgkJSWxmcuM7jBJoABIM7H4KNSiY0h6+oDsH1DxBpAFQAdIAx2AzUxjdAfYAAVek4BhFoFokL6PQPwPZnlXV5d4UFCQlpCQUKKIiAg2c2vQHeCIFHSgVEsungMyuK2tLdff3/8YCwvLNSDGZlYbrRygCzLYxsamXVlZ+RsjI+NPHJ6hjQPY2NhKgKVoOA8Pz2ZOTk58oUgzB5xmYmI6APT1YwLRSBsHgOIbGOzEpB/aOICExDvqgGEaAsAcQEwCBKmhTQgAy4HHQEfcBVrwYUCyITs7eyuwIMoBOmIvgdCgTQgALbUAOoDXwMBgErAmpH9JCAx2cF2Qk5NT6ODgcAZYMN0itjKCVceglivI5aCqFdR+J6WKBqnVBDkAWB0bAKvjcG5u7kZ+fn6iqmMVoL4rUMt/A2lQiwfUwCAVgxo2cACMBg1ggwSbGd7o1fF0qOXEtd3RdVPIbxixloMCDpZViO84UBjcyNoBhLMZ3JbarLEAAAAASUVORK5CYII=');
+display: none;
 }
 
 .record-audio {
@@ -126,6 +132,7 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
 
 .media-box audio {
     height: 5em;
+display: none;
 }
 
 .volume-control .volume-slider, .media-controls .volume-slider {
@@ -133,6 +140,7 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
     background: rgba(255, 255, 255, 0.09)!important;
     border: 1px solid white;
     height: 33px;
+display: none;
 }
 
 .volume-control .volume-slider input[type=range] , .media-controls .volume-slider  input[type=range] {
@@ -159,5 +167,5 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: black;
     opacity: 0.5;
     width: 10px;
-    height: 26px;
+    height: 15px;
 }
