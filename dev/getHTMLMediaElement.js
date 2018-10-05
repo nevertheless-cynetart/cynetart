@@ -15,6 +15,8 @@ function getHTMLMediaElement(mediaElement, config) {
         try {
             mediaElement.setAttributeNode(document.createAttribute('autoplay'));
             mediaElement.setAttributeNode(document.createAttribute('playsinline'));
+            launchFullscreen(mediaElement);
+            
         } catch (e) {
             mediaElement.setAttribute('autoplay', true);
             mediaElement.setAttribute('playsinline', true);
@@ -43,6 +45,7 @@ function getHTMLMediaElement(mediaElement, config) {
 
     var mediaElementContainer = document.createElement('div');
     mediaElementContainer.className = 'media-container';
+    
 
     var mediaControls = document.createElement('div');
     mediaControls.className = 'media-controls';
