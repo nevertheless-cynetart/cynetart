@@ -136,6 +136,7 @@ button[disabled], input[disabled] {
   border: 1px solid #dcd7d7!important;
   cursor: not-allowed!important;
   visibility: hidden;
+    display: none;
 }
 
 .menu-explorer {
