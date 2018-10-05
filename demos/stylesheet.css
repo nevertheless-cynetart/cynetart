@@ -140,7 +140,6 @@ button[disabled], input[disabled] {
   border: 0px solid #dcd7d7!important;
   cursor: not-allowed!important;
   visibility: hidden;
-  font-size: 1px;
 }
 
 .menu-explorer {
