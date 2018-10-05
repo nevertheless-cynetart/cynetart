@@ -22,12 +22,7 @@ Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaEleme
 }
 
 .media-container {
-    
-    width: 100%;
-  min-height: 100%;
-  margin:0 auto;
-  transform: rotateY(180deg);
-    
+    width: 36%;
     display: inline-block;
     border: 0px solid rgb(0, 0, 0);
     border-radius: 0px;
