@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Viewer</title>
+  <link rel="stylesheet" href="/demos/stylesheet.css">
+</head>
+<body>
+<iframe src="http://www.youtube.com" frameborder="0" scrolling="yes"                           
+                                style="height: 100% !important; 
+                                            width: 49%; float: left; " height="100%" width="49%"
+                               align="left">
+                              </iframe>  
+
+ <iframe src="http://www.youtube.com" frameborder="0" scrolling="yes"  
+                                    style="overflow: hidden; height: 100% !important;
+
+                                    width: 49%; " height="100%" width="49%"                                 
+                                     align="right">
+                                    </iframe>
+  
+</body>
+</html>
